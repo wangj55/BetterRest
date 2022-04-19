@@ -57,9 +57,14 @@ struct ContentView: View {
                     }
                 }
                 .labelsHidden()
-                
-                Section("Recommended Bedtime") {
-                    Text(bedtimeText)
+            
+                Section("Recommended bedtime") {
+                    VStack(alignment: .center) {
+                        Text(bedtimeText)
+                            .font(.largeTitle)
+                            .bold()
+                    }
+                    .frame(maxWidth: .infinity)
                 }
             }
             .navigationTitle("BetterRest")
